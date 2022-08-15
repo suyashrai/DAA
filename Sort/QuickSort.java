@@ -1,6 +1,6 @@
 package Sort;
 
-class QuickSortAsc {
+class QuickSort {
 
     static void quickSort(int arr[], int low, int high){
         if(low<high){

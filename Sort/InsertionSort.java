@@ -1,26 +1,27 @@
 package Sort;
 
-class BubbleSortAsc {
+class InsertionSort {
 
-    static void bubbleSort(int arr[]){
-        for(int i=0; i<arr.length-1; i++){
-            for(int j=0; j<arr.length-i-1; j++){
-                if(arr[j]>arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
+    static void insertionSort(int arr[]){
+        for(int i=1; i<arr.length; i++){
+            int current = arr[i];
+            int j=i-1;
+            while(j>=0 && arr[j]>current){
+                arr[j+1] = arr[j];
+                j--;
             }
+
+            arr[j+1] = current;
         }
     }
 
     public static void main(String args[]){
 
-        int arr[] = {90, 82, 54, 34, 86, 23, 67};
+        int arr[] = {98, 82, 54, 34, 86, 23, 67};
         System.out.println("");
         System.out.print("Original Array: ");
         printArray(arr);
-        bubbleSort(arr);
+        insertionSort(arr);
         System.out.print("Sorted Array: ");
         printArray(arr);
     }
