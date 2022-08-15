@@ -1,6 +1,6 @@
 package Sort;
 
-public class HeapSort {
+public class HeapSortDesc {
 
     public static void main(String args[])
     {
